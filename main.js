@@ -38,10 +38,14 @@ let numMilhojas = 0;
 
 let seccionFactura = document.getElementById('factura');
 let totalFactura = document.getElementById('totalFactura');
+let prodsCarrito = document.getElementById('prodsCarrito');
 let totalGeneral = 0;
+
+let btnVaciarCarrito = document.getElementById('vaciarCarrito');
 
 function agregar(e) {
     let producto = e.parentElement.id;
+    btnVaciarCarrito.style.display = 'inline-block';
 
     const newDiv = document.createElement('div');
     newDiv.style.display = 'flex';
@@ -100,10 +104,23 @@ function agregar(e) {
         newDiv.appendChild(nombre);
         newDiv.appendChild(numProd);
         newDiv.appendChild(precioP);
-        seccionFactura.appendChild(newDiv);
+        prodsCarrito.appendChild(newDiv);
     }
 
-    totalFactura.textContent = `$${totalGeneral.toFixed(2)}`;
-    seccionFactura.style.display = 'block';
+    console.log(`Producto agregado al carro: ${nombre.textContent} - ${precioP.textContent}`)
 
+    totalFactura.textContent = `$${totalGeneral.toFixed(2)}`;
+
+    if(parseFloat(document.getElementById('totalFactura').textContent.replace('$', '')) > 50){
+         alert('Envío gratis aplicado');
+    }
 }
+
+function vaciar(){
+    totalFactura.textContent = `$0`;;
+    prodsCarrito.innerHTML = '';
+    numPanes = 0;
+    numJugos = 0;
+    numMilhojas = 0;
+}
+

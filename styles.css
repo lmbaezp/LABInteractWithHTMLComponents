@@ -124,15 +124,33 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
 .btnAgregar {
     align-self: center;
     
 }
 
-#factura {
-    /* display: none; */
+#factura, #prodsCarrito {
     flex-direction: column;
     justify-content: center;
     align-content: space-between;
+}
 
+#vaciarCarrito {
+    display: none;
+    background-color: #F05365;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+}
+
+#vaciarCarrito:hover {
+    border: 2px solid #F05365;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #F05365;
+    cursor: pointer;
+    padding: 10px;
 }
