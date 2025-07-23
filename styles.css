@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#headerEjercicio1 {
+    background-color: #0B3C49;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#opciones {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    padding: 50px 80px;
+}
+
+#opciones span {
+    text-align: center;
+}
+
+#lista {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.opcion {
+    margin: 10px;
+    padding: 10px 10px;
+    border-right: 2px solid #21295C;
+    border-bottom: 2px solid #21295C;
+    display: inline-block;
+}
+
+.btnVotar, .btnAgregar {
+    background-color: #1E3F20;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+}
+
+.btnVotar:hover, .btnAgregar:hover {
+    border: 2px solid #1E3F20;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #1E3F20;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#resultados {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.opcResultados {
+    font-style: italic;
+}
+
+#headerEjercicio2 {
+    background-color: #0B3C49;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px;
+    width: 100vw;
+    box-sizing: border-box;
+    margin-top: 50px;
+}
+
+/* ///////////////////////////////////////////////////// */
+
+#seccProductos, #factura {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    padding: 50px 80px;
+    text-align: center;
+}
+
+.titulos2 {
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+#productos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#productos p{
+    text-align: center;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    background-color: #E6E8E6;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.btnAgregar {
+    align-self: center;
+    
+}
+
+#factura {
+    /* display: none; */
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+
+}

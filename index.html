@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="headerEjercicio1">
+        <h1 id="ejercicio1">EJERCICIO 1</h1>
+    </div>
+    <div id="opciones">
+        <p>Selecciona en cuál opción tienes más interés:</p>
+        <div id="lista">
+            <button id="diseñoWeb" class="btnVotar" onclick="enviarVoto(this)">Diseño Web</button>
+            <button id="javascript" class="btnVotar" onclick="enviarVoto(this)">JavaScript</button>
+            <button id="basesDeDatos"class="btnVotar" onclick="enviarVoto(this)">Bases de Datos</button>
+        </div>
+        <br>
+        <p id="resultados">RESULTADOS</p>
+            <p class="opcResultados">Votos por Diseño web: <span id="votosDiseñoWeb">0</span></p>
+            <p class="opcResultados">Votos por JavaScript: <span id="votosJavascript">0</span></p>
+            <p class="opcResultados">Votos por Bases de datos: <span id="votosBasesDeDatos">0</span></p>
+    </div>
+
+    <div id="headerEjercicio2">
+        <h1 id="ejercicio1">EJERCICIO 2</h1>
+    </div>
+    
+    <div id="seccProductos">
+        <p id="tituloProductos" class="titulos2">PRODUCTOS DISPONIBLES</p>
+        <div id="productos">
+            <div id="jugo" class="producto">
+                <img src="./img/jugo.png" alt="">
+                <p>Precio: <span id="precioJugo">$2.5</span></p>
+                <button id="agregarCarrito" class="btnAgregar" onclick="agregar(this)">Agregar al carrito</button>
+            </div>
+            <div id="pan" class="producto">
+                <img src="./img/pan.png" alt="">
+                <p>Precio: <span id="precioPan">$6</span></p>
+                <button id="agregarCarrito" class="btnAgregar" onclick="agregar(this)">Agregar al carrito</button>
+            </div>
+            <div id="milhoja" class="producto">
+                <img src="./img/milhoja.png" alt="">
+                <p>Precio: <span id="precioMilhoja">$11</span></p>
+                <button id="agregarCarrito" class="btnAgregar" onclick="agregar(this)">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="factura">
+        <p id="tituloFactura" class="titulos2">Factura</p>
+        <p>Total Factura: <span id="totalFactura">0</span></p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
