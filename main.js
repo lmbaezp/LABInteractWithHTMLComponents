@@ -39,6 +39,7 @@ let numMilhojas = 0;
 let seccionFactura = document.getElementById('factura');
 let totalFactura = document.getElementById('totalFactura');
 let prodsCarrito = document.getElementById('prodsCarrito');
+let totalProductos = document.getElementById('totalProductos');
 let totalGeneral = 0;
 
 let btnVaciarCarrito = document.getElementById('vaciarCarrito');
@@ -110,6 +111,7 @@ function agregar(e) {
     console.log(`Producto agregado al carro: ${nombre.textContent} - ${precioP.textContent}`)
 
     totalFactura.textContent = `$${totalGeneral.toFixed(2)}`;
+    totalProductos.textContent = numJugos + numMilhojas + numPanes;
 
     if(parseFloat(document.getElementById('totalFactura').textContent.replace('$', '')) > 50){
          alert('Envío gratis aplicado');
@@ -117,7 +119,9 @@ function agregar(e) {
 }
 
 function vaciar(){
-    totalFactura.textContent = `$0`;;
+    totalGeneral = 0;
+    totalFactura.textContent = `$0`;
+    totalProductos.textContent = 0;
     prodsCarrito.innerHTML = '';
     numPanes = 0;
     numJugos = 0;
